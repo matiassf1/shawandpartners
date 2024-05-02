@@ -6,7 +6,10 @@ import userRoutes from './routes/userRoutes';
 const app = express();
 const port = process.env.PORT ?? 3000;
 
-app.use(cors());
+const corsOptions = {
+    origin: '*'
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/files', fileRoutes);
