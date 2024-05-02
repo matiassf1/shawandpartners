@@ -1,4 +1,4 @@
-import { API_HOST } from "../config";
+import { env } from "../config";
 import { ApiUploadResponse, Person } from "../interfaces";
 
 export const uploadFile = async (file: File): Promise<[Error | null, Person[]?]> => {
@@ -7,7 +7,7 @@ export const uploadFile = async (file: File): Promise<[Error | null, Person[]?]>
     formData.append('file', file);
 
     try {
-        const res = await fetch(`${API_HOST}/api/files`, {
+        const res = await fetch(`${env.api.baseUrl}/api/files`, {
             method: 'POST',
             body: formData
         });

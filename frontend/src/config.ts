@@ -1,1 +1,5 @@
-export const { VITE_API_HOST: API_HOST } = import.meta.env
+export const env = {
+	api: {
+		baseUrl: import.meta.env.VITE_API_BASE_URL,
+	},
+};

@@ -1,9 +1,9 @@
-import { API_HOST } from "../config";
+import { env } from "../config";
 import { ApiUploadResponse, Person } from "../interfaces";
 
 export const searchData = async (search: string): Promise<[Error | null, Person[]?]> => {
     try {
-        const res = await fetch(`${API_HOST}/api/users?q=${search}`);
+        const res = await fetch(`${env.api.baseUrl}/api/users?q=${search}`);
 
         if (!res.ok) return [new Error(`Error searching data: ${res.statusText}`)]
         const { data }: ApiUploadResponse = await res.json();
