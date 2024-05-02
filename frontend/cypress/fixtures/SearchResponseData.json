@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "city": "New York",
+        "country": "USA",
+        "favorite_sport": "Basketball"
+    },
+    {
+        "name": "Mike Johnson",
+        "city": "Paris",
+        "country": "France",
+        "favorite_sport": "Tennis"
+    }
+]
