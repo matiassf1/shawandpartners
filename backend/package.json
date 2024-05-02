@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "cross-env PORT=3000 ts-node app.ts",
     "start": "cross-env PORT=3000 ts-node app.ts",
-    "test": "jest"
+    "test": "jest",
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "ISC",
